@@ -18,14 +18,16 @@ public class Boss
     // 魔法攻撃関数　課題
     public void MagicAttack()
     {
-        this.mp = mp - 5;
-        if (this.mp > 0)
+        
+        if (this.mp >= 5)
         {
-            Debug.Log("魔法攻撃をした。残りMPは" + mp);
-        } else
+            this.mp = mp - 5;
+            Debug.Log("魔法攻撃をした。残りMPは" + mp)         
+        } else if(mp < 5)
         {
-            Debug.Log("MPが足りないため魔法攻撃が使えない");
+            Debug.Log("MPが足りないため魔法が使えない。");
         }
+   
     }
 
     // 防御用の関数
